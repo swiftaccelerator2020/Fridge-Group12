@@ -44,7 +44,8 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = itemTableView.dequeueReusableCell(withIdentifier: "Item") as! ItemTableViewCell
         
-        cell.itemView.layer.cornerRadius = 100
+        cell.itemView.layer.cornerRadius = 25
+        
         
         return cell
     }

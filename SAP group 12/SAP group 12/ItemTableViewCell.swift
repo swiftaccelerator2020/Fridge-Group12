@@ -1,19 +1,19 @@
 //
-//  ItemsTableViewCell.swift
+//  ItemTableViewCell.swift
 //  SAP group 12
 //
-//  Created by Shanjiith Pranov on 2/12/20.
+//  Created by Shanjiith Pranov on 4/12/20.
 //
 
 import UIKit
 
-class ItemsTableViewCell: UITableViewCell {
+class ItemTableViewCell: UITableViewCell {
 
-    
+    @IBOutlet weak var itemView: UIView!
+    @IBOutlet weak var indicatorImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

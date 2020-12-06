@@ -1,21 +1,23 @@
 //
-//  ItemsViewController.swift
+//  RecipiesViewController.swift
 //  SAP group 12
 //
-//  Created by Shanjiith Pranov on 4/12/20.
+//  Created by Shanjiith Pranov on 6/12/20.
 //
 
 import UIKit
 
-class ItemsViewController: UIViewController {
+class RecipiesViewController: UIViewController {
 
-    @IBOutlet weak var itemTableView: UITableView!
+    @IBOutlet weak var recipiesTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        itemTableView.delegate = self
-        itemTableView.dataSource = self
-        itemTableView.separatorStyle = .none
+
+        // Do any additional setup after loading the view.
+
+        recipiesTableView.delegate = self
+        recipiesTableView.dataSource = self
+        recipiesTableView.separatorStyle = .none
     }
     
 
@@ -31,24 +33,29 @@ class ItemsViewController: UIViewController {
 
 }
 
-extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
-    
+extension RecipiesViewController: UITableViewDataSource, UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+        
+
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = itemTableView.dequeueReusableCell(withIdentifier: "Item") as! ItemTableViewCell
+        let cell = recipiesTableView.dequeueReusableCell(withIdentifier: "Recipie") as! RecipieTableViewCell
         
-        cell.itemView.layer.cornerRadius = 25
-        
-        
+        cell.recipieView.layer.cornerRadius = 10
+
+
+
         return cell
     }
-    
-    
+
+
 }
+
+

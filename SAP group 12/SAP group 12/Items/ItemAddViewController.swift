@@ -10,11 +10,22 @@ import UIKit
 class ItemAddViewController: UIViewController {
 
     @IBOutlet weak var expiryDatePicker: UIDatePicker!
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var quantityTextField: UITextField!
+    var item: Item!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func save(_ unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
     
 
     /*

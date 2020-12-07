@@ -169,7 +169,7 @@
                             <barButtonItem systemItem="add" id="zaL-Cb-ytC">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="w4K-C1-SVU" kind="show" id="BIq-qf-jwJ"/>
+                                    <segue destination="lgz-Ou-LgS" kind="show" id="7mQ-QZ-Kdg"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="trash" catalog="system" id="bUd-IQ-oFP">
@@ -194,7 +194,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mdJ-2p-O6A">
-                                <rect key="frame" x="10" y="150" width="394" height="653"/>
+                                <rect key="frame" x="10" y="98" width="394" height="705"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KA-Zz-X1j">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="28.5"/>
@@ -227,7 +227,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="rdO-oe-Qk6">
-                                        <rect key="frame" x="0.0" y="187.5" width="394" height="465.5"/>
+                                        <rect key="frame" x="0.0" y="188" width="394" height="517"/>
                                     </datePicker>
                                 </subviews>
                                 <constraints>
@@ -253,15 +253,21 @@
                     <navigationItem key="navigationItem" id="F0T-Rj-qYC">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="g5I-WJ-B9M">
                             <color key="tintColor" name="tab bar colour"/>
+                            <connections>
+                                <segue destination="nuH-YN-kLA" kind="unwind" unwindAction="save:" id="AQn-OD-Q8C"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="expiryDatePicker" destination="rdO-oe-Qk6" id="DMr-wf-rBX"/>
+                        <outlet property="nameTextField" destination="wJe-kE-Wd8" id="1db-Ai-CDJ"/>
+                        <outlet property="quantityTextField" destination="IbK-hG-yYf" id="UY9-5q-6u8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gj5-Jn-FSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="nuH-YN-kLA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-983" y="1836"/>
+            <point key="canvasLocation" x="-814" y="2578"/>
         </scene>
         <!--Edit-->
         <scene sceneID="5bt-S8-cgJ">
@@ -323,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpM-Si-Nmw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-246" y="1824"/>
+            <point key="canvasLocation" x="663.768115942029" y="1823.4375"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ibm-KL-jve">
@@ -419,7 +425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZeY-0x-apm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="443" y="1865"/>
+            <point key="canvasLocation" x="1352.1739130434785" y="1864.9553571428571"/>
         </scene>
         <!--Favourities-->
         <scene sceneID="fte-MW-mfD">
@@ -900,6 +906,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PkR-KE-ueU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2662" y="1075"/>
+        </scene>
+        <!--Add-->
+        <scene sceneID="Y1N-tp-3UZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lgz-Ou-LgS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Add" id="jU2-v0-2Ao"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wwj-jE-VeI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w4K-C1-SVU" kind="relationship" relationship="rootViewController" id="ZZF-BG-99X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I3j-T3-oph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-862" y="1810"/>
         </scene>
     </scenes>
     <resources>

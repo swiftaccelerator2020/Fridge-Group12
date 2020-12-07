@@ -14,6 +14,12 @@
 		691C7E0A257CFD33006A82EB /* FavouritiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C7E09257CFD33006A82EB /* FavouritiesTableViewCell.swift */; };
 		691C7E14257CFFCA006A82EB /* GroceryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C7E13257CFFCA006A82EB /* GroceryListTableViewCell.swift */; };
 		691C7E1A257D3394006A82EB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C7E19257D3393006A82EB /* MainTabBarController.swift */; };
+		6973A49B257DC9BF00F48C67 /* ItemAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973A49A257DC9BF00F48C67 /* ItemAddViewController.swift */; };
+		6973A49F257DCACD00F48C67 /* ItemEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973A49E257DCACD00F48C67 /* ItemEditViewController.swift */; };
+		6973A4A2257DCB0700F48C67 /* RecipieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973A4A1257DCB0700F48C67 /* RecipieViewController.swift */; };
+		6973A4A9257DD77A00F48C67 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973A4A8257DD77A00F48C67 /* Item.swift */; };
+		6973A4AE257DE66D00F48C67 /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973A4AD257DE66D00F48C67 /* GroceryList.swift */; };
+		6973A4B1257DE89000F48C67 /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973A4B0257DE89000F48C67 /* Favourite.swift */; };
 		69DE85FB257A86C100CFAF28 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DE85FA257A86C100CFAF28 /* ItemsViewController.swift */; };
 		69DE8600257A87EC00CFAF28 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DE85FF257A87EC00CFAF28 /* ItemTableViewCell.swift */; };
 		69DE8603257B231300CFAF28 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DE8602257B231300CFAF28 /* SettingsViewController.swift */; };
@@ -33,6 +39,12 @@
 		691C7E09257CFD33006A82EB /* FavouritiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritiesTableViewCell.swift; sourceTree = "<group>"; };
 		691C7E13257CFFCA006A82EB /* GroceryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListTableViewCell.swift; sourceTree = "<group>"; };
 		691C7E19257D3393006A82EB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		6973A49A257DC9BF00F48C67 /* ItemAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAddViewController.swift; sourceTree = "<group>"; };
+		6973A49E257DCACD00F48C67 /* ItemEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemEditViewController.swift; path = Items/ItemEditViewController.swift; sourceTree = "<group>"; };
+		6973A4A1257DCB0700F48C67 /* RecipieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecipieViewController.swift; path = Recipies/RecipieViewController.swift; sourceTree = "<group>"; };
+		6973A4A8257DD77A00F48C67 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		6973A4AD257DE66D00F48C67 /* GroceryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryList.swift; sourceTree = "<group>"; };
+		6973A4B0257DE89000F48C67 /* Favourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
 		69DE85FA257A86C100CFAF28 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		69DE85FF257A87EC00CFAF28 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		69DE8602257B231300CFAF28 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +72,7 @@
 		691C7E0C257CFE48006A82EB /* Favourities */ = {
 			isa = PBXGroup;
 			children = (
+				6973A4B0257DE89000F48C67 /* Favourite.swift */,
 				691C7E09257CFD33006A82EB /* FavouritiesTableViewCell.swift */,
 				691C7E03257CFC65006A82EB /* FavouritiesViewController.swift */,
 			);
@@ -87,6 +100,8 @@
 		691C7E0F257CFE74006A82EB /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				6973A4A8257DD77A00F48C67 /* Item.swift */,
+				6973A49A257DC9BF00F48C67 /* ItemAddViewController.swift */,
 				69DE85FF257A87EC00CFAF28 /* ItemTableViewCell.swift */,
 				69DE85FA257A86C100CFAF28 /* ItemsViewController.swift */,
 			);
@@ -96,6 +111,7 @@
 		691C7E16257CFFD8006A82EB /* Grocery List */ = {
 			isa = PBXGroup;
 			children = (
+				6973A4AD257DE66D00F48C67 /* GroceryList.swift */,
 				691C7E13257CFFCA006A82EB /* GroceryListTableViewCell.swift */,
 				691C7E06257CFCE8006A82EB /* GroceryListViewController.swift */,
 			);
@@ -124,6 +140,8 @@
 				69EE1C4B25778B50003EAEDC /* AppDelegate.swift */,
 				69EE1C4D25778B50003EAEDC /* SceneDelegate.swift */,
 				69EE1C5125778B50003EAEDC /* Main.storyboard */,
+				6973A4A1257DCB0700F48C67 /* RecipieViewController.swift */,
+				6973A49E257DCACD00F48C67 /* ItemEditViewController.swift */,
 				691C7E19257D3393006A82EB /* MainTabBarController.swift */,
 				691C7E16257CFFD8006A82EB /* Grocery List */,
 				691C7E0C257CFE48006A82EB /* Favourities */,
@@ -207,15 +225,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6973A4B1257DE89000F48C67 /* Favourite.swift in Sources */,
 				691C7E0A257CFD33006A82EB /* FavouritiesTableViewCell.swift in Sources */,
+				6973A4AE257DE66D00F48C67 /* GroceryList.swift in Sources */,
 				691C7E07257CFCE8006A82EB /* GroceryListViewController.swift in Sources */,
+				6973A4A9257DD77A00F48C67 /* Item.swift in Sources */,
 				69DE8606257B23C200CFAF28 /* SettingTableViewCell.swift in Sources */,
 				69DE8600257A87EC00CFAF28 /* ItemTableViewCell.swift in Sources */,
 				691C7E01257CFBBB006A82EB /* RecipiesViewController.swift in Sources */,
 				691C7DFE257CFB93006A82EB /* RecipieTableViewCell.swift in Sources */,
+				6973A4A2257DCB0700F48C67 /* RecipieViewController.swift in Sources */,
+				6973A49F257DCACD00F48C67 /* ItemEditViewController.swift in Sources */,
 				691C7E04257CFC65006A82EB /* FavouritiesViewController.swift in Sources */,
 				691C7E1A257D3394006A82EB /* MainTabBarController.swift in Sources */,
 				691C7E14257CFFCA006A82EB /* GroceryListTableViewCell.swift in Sources */,
+				6973A49B257DC9BF00F48C67 /* ItemAddViewController.swift in Sources */,
 				69DE85FB257A86C100CFAF28 /* ItemsViewController.swift in Sources */,
 				69EE1C4C25778B50003EAEDC /* AppDelegate.swift in Sources */,
 				69DE8603257B231300CFAF28 /* SettingsViewController.swift in Sources */,

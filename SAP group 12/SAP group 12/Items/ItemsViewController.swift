@@ -10,12 +10,24 @@ import UIKit
 class ItemsViewController: UIViewController {
 
     @IBOutlet weak var itemTableView: UITableView!
+    
+    var items: [Item] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         itemTableView.delegate = self
         itemTableView.dataSource = self
         itemTableView.separatorStyle = .none
+        
+        if let loadedItems = Item.loadFromFile() {
+            items = loadedItems
+            print("We found our friends!")
+        } else {
+            items = Item.loadSampleData()
+            print("No friends :( Making some up")
+        }
         
         
     }
@@ -41,7 +53,7 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return items.count
     }
     
     
@@ -53,7 +65,8 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         
         // create tap gesture recognizer
 
-        
+        cell.itemTitle.text = items[indexPath.row].name
+        cell.itemQuantity.text = items[indexPath.row].quantity
         
         return cell
     }

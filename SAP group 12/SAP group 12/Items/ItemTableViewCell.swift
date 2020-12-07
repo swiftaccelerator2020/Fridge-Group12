@@ -11,6 +11,10 @@ class ItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var itemView: UIView!
     @IBOutlet weak var indicatorImageView: UIImageView!
+    @IBOutlet weak var itemTitle: UILabel!
+    @IBOutlet weak var itemQuantity: UILabel!
+    @IBOutlet weak var itemFavourite: UIButton!
+    @IBOutlet weak var itemMeni: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

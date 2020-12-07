@@ -9,6 +9,10 @@ import UIKit
 
 class GroceryListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var groceryView: UIView!
+    @IBOutlet weak var groceryTitle: UILabel!
+    @IBOutlet weak var groceryQuantity: UILabel!
+    @IBOutlet weak var groceryMenu: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

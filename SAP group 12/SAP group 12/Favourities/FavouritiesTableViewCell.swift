@@ -8,7 +8,12 @@
 import UIKit
 
 class FavouritiesTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var favouritiesView: UIView!
+    
+    @IBOutlet weak var favouritiesTitle: UILabel!
+    @IBOutlet weak var favouritiesQuantity: UILabel!
+    @IBOutlet weak var favouritiesMenu: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

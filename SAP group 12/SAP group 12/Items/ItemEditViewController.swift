@@ -1,21 +1,18 @@
 //
-//  MainTabBarController.swift
+//  ItemEditViewController.swift
 //  SAP group 12
 //
-//  Created by Shanjiith Pranov on 6/12/20.
+//  Created by Shanjiith Pranov on 7/12/20.
 //
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
-    
-
+class ItemEditViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.tabBar.unselectedItemTintColor = UIColor.black
     }
     
 

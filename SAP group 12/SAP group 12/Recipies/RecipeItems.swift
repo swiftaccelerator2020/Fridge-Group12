@@ -78,13 +78,29 @@ func getRecipes(foodItems: [String], completion: @escaping (RecipeResults?) -> V
 }
 
 // only list recipes with valid websites: function to check if a website returns 200 when called
-func checkWebsiteValid(url: URL, completion: @escaping (Bool?) -> Void) {
-    URLSession.shared.dataTask(with: url) { (data, response, error) in
-        if let response = response as? HTTPURLResponse, response.statusCode == 200 {
-            completion(true)
-        } else {
+func checkWebsiteValid(url: String, completion: @escaping (Bool?) -> Void) {
+    let markedWebsites = ["recipezaar.com", "food.com", "grouprecipes.com", "cookeatshare.com", "bigoven.com", "allrecipes.com", "myrecipes.com"] // only pings websites within list - may need better error handling
+    for i in 0...markedWebsites.count - 1 {
+        print(url)
+        print(url.contains(markedWebsites[i]))
+        print("")
+        if url.contains(markedWebsites[i]) == true {
+            
+            URLSession.shared.dataTask(with: URL(string: url)!) { (data, response, error) in
+                if let response = response as? HTTPURLResponse, response.statusCode == 200 {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
+                
+            }.resume()
+            break
+        } else if i == markedWebsites.count - 1 {
             completion(false)
+            break
+
         }
-        
-    }.resume()
+    }
+    
+    
 }

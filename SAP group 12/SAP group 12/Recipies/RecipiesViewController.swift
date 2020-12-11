@@ -23,7 +23,7 @@ class RecipiesViewController: UIViewController {
         recipiesTableView.separatorStyle = .none
         
         // TODO: access array of food items to load recipes. This is a placeholder - zedong
-        let searchFoodItems = ["potato", "tomato"]
+        let searchFoodItems = ["potato", "sausage"]
         
         // run get recipes function
         getRecipes (foodItems: searchFoodItems) { (recipeResults) in
@@ -32,7 +32,7 @@ class RecipiesViewController: UIViewController {
                 var itemsLeftToCheck = recipeResults.results.count
                 // using a for loop, check all links from item results and only append items with valid recipe links
                 for i in 0...(recipeResults.results.count - 1) {
-                    let urlToCheck = URL(string: "\(recipeResults.results[i].recipeLink)")!
+                    let urlToCheck = "\(recipeResults.results[i].recipeLink)"
                     checkWebsiteValid(url: urlToCheck) { (websiteIsValid) in
                         itemsLeftToCheck -= 1
                         if websiteIsValid! {
@@ -46,10 +46,10 @@ class RecipiesViewController: UIViewController {
                             titleOfItem = titleOfItem.filter {CharacterSet.decimalDigits.inverted.contains($0.unicodeScalars.first!)}
                             titleOfItem = titleOfItem.replacingOccurrences(of: "  ", with: " ")
                             
-                            // regex function 2 - replace consecutive spacebar characters with only 1 spacebar character
-                            let regex2 = try! NSRegularExpression(pattern: #"  *"#, options: [.caseInsensitive])
+                            // regex function 2 - remove all whitespace characters at the start
+                            let regex2 = try! NSRegularExpression(pattern: #"^\s*"#, options: [.caseInsensitive])
                             let mString2 = NSMutableString(string: titleOfItem)
-                            regex2.replaceMatches(in: mString2, options: [], range: NSMakeRange(0, mString2.length), withTemplate: " ")
+                            regex2.replaceMatches(in: mString2, options: [], range: NSMakeRange(0, mString2.length), withTemplate: "")
                             titleOfItem = String(mString2)
                             titleOfItem = titleOfItem.filter {CharacterSet.decimalDigits.inverted.contains($0.unicodeScalars.first!)}
                             titleOfItem = titleOfItem.replacingOccurrences(of: "  ", with: " ")

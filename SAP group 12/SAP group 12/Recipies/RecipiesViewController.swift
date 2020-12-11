@@ -38,17 +38,24 @@ class RecipiesViewController: UIViewController {
                         if websiteIsValid! {
                             print(recipeResults.results[i])
                             var titleOfItem = recipeResults.results[i].title
-                            // TODO - use regex to filter out non-spacebar white-space characters and others - zedong
-                            /*
-                            let regex = try! NSRegularExpression(pattern: "[\n]", options: [.caseInsensitive])
-                            let mString = NSMutableString(string: titleOfItem)
-                            regex.replaceMatches(in: mString, options: [], range: NSMakeRange(0, mString.length), withTemplate: "")
-                            titleOfItem = String(mString)
+                            // regex function 1 - remove all whitespace characters that are not spacebar characters
+                            let regex1 = try! NSRegularExpression(pattern: #"[\r\n\t\f\v]"#, options: [.caseInsensitive])
+                            let mString1 = NSMutableString(string: titleOfItem)
+                            regex1.replaceMatches(in: mString1, options: [], range: NSMakeRange(0, mString1.length), withTemplate: "")
+                            titleOfItem = String(mString1)
                             titleOfItem = titleOfItem.filter {CharacterSet.decimalDigits.inverted.contains($0.unicodeScalars.first!)}
                             titleOfItem = titleOfItem.replacingOccurrences(of: "  ", with: " ")
+                            
+                            // regex function 2 - replace consecutive spacebar characters with only 1 spacebar character
+                            let regex2 = try! NSRegularExpression(pattern: #"  *"#, options: [.caseInsensitive])
+                            let mString2 = NSMutableString(string: titleOfItem)
+                            regex2.replaceMatches(in: mString2, options: [], range: NSMakeRange(0, mString2.length), withTemplate: " ")
+                            titleOfItem = String(mString2)
+                            titleOfItem = titleOfItem.filter {CharacterSet.decimalDigits.inverted.contains($0.unicodeScalars.first!)}
+                            titleOfItem = titleOfItem.replacingOccurrences(of: "  ", with: " ")
+                            
                             print(titleOfItem)
                             recipeResults.results[i].title = titleOfItem
-                            */
                             self.listOfRecipes.append(recipeResults.results[i])
                         }
                         if(itemsLeftToCheck == 0) {

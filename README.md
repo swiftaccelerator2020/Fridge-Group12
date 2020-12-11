@@ -13,7 +13,7 @@ This project is not open for contributions.
 ### Team members 
 
 [Ze Dong](https://github.com/sawzedong), 
-[Yu Yuan](https://github.com/Compsognathus07), 
+[Yu Yan](https://github.com/Compsognathus07), 
 [Le Yang](https://github.com/leCloudy), 
 [Shanjiith Pranov](https://github.com/Shanjiith-Pranov) 
 

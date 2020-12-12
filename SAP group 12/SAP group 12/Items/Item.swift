@@ -38,19 +38,19 @@ class Item: Codable {
         return documentsPath.appendingPathComponent(plistName).appendingPathExtension("plist")
     }
 
-    static func saveToFile(friends: [Item]) {
+    static func saveToFile(items: [Item]) {
         let archiveURL = getArchiveURL()
         let propertyListEncoder = PropertyListEncoder()
-        let encodedFriends = try? propertyListEncoder.encode(friends)
-        try? encodedFriends?.write(to: archiveURL, options: .noFileProtection)
+        let encodedItems = try? propertyListEncoder.encode(items)
+        try? encodedItems?.write(to: archiveURL, options: .noFileProtection)
     }
 
     static func loadFromFile() -> [Item]? {
         let archiveURL = getArchiveURL()
         let propertyListDecoder = PropertyListDecoder()
-        guard let retrievedFriendsData = try? Data(contentsOf: archiveURL) else { return nil }
-        guard let decodedFriends = try? propertyListDecoder.decode(Array<Item>.self, from: retrievedFriendsData) else { return nil }
-        return decodedFriends
+        guard let retrievedItemsData = try? Data(contentsOf: archiveURL) else { return nil }
+        guard let decodedItems = try? propertyListDecoder.decode(Array<Item>.self, from: retrievedItemsData) else { return nil }
+        return decodedItems
     }
     
 }

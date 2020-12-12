@@ -71,7 +71,15 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    
-    
+    @IBAction func saveItem (with segue: UIStoryboardSegue) {
+        if segue.identifier == "saveunwind", let source = segue.source as? ItemAddViewController {
+            if source.item != nil {
+                self.items.append(source.item)
+                Item.saveToFile(items: items)
+            }
+            self.itemTableView.reloadData()
+            
+        }
+    }
     
 }

@@ -11,6 +11,7 @@ class GroceryListViewController: UIViewController {
 
     @IBOutlet weak var groceryListTableView: UITableView!
     var groceryLists: [GroceryList] = []
+    var row = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,11 @@ class GroceryListViewController: UIViewController {
             print("No friends :( Making some up")
         }
     }
+    
+
+    
+    
+
     
 
     /*
@@ -66,5 +72,34 @@ extension GroceryListViewController: UITableViewDataSource, UITableViewDelegate 
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        row = indexPath.row
+        performSegue(withIdentifier: "edit grocery", sender: row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "edit grocery"{
+            
+            let destination = segue.destination as! GroceryListAddEditViewController
+            
+            destination.grocery = groceryLists[row]
+        
+        }
+    }
+    
+    @IBAction func unwindToMain(segue: UIStoryboardSegue) {
+        if segue.identifier == "unwindToMain" {
+            let source = segue.source as! GroceryListAddEditViewController
+            if source.newItem {
+                groceryLists.append(source.grocery)
+                GroceryList.saveToFile(groceries: groceryLists)
+            }else{
+                groceryLists[row] = source.grocery
+            }
+            self.groceryListTableView.reloadData()
+            
+        }
+    }
     
 }

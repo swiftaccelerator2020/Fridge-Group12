@@ -12,10 +12,14 @@ class ItemsViewController: UIViewController {
     @IBOutlet weak var itemTableView: UITableView!
     
     var items: [Item] = []
-    
+    var row = 0
+    static let usernameKey = "user name blah blah"
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         
         itemTableView.delegate = self
         itemTableView.dataSource = self
@@ -25,14 +29,53 @@ class ItemsViewController: UIViewController {
             items = loadedItems
             print("We found our friends!")
         } else {
-            items = Item.loadSampleData()
+            
             print("No friends :( Making some up")
+            
+            
         }
         
+
+        
+        let defaults = UserDefaults.standard
+        if let username = defaults.string(forKey: ItemsViewController.usernameKey) {
+            self.title = "\(username)'s Items"
+            return
+        }
+        
+        let alert = UIAlertController(title: "What's your name?", message: "", preferredStyle: .alert)
+        
+        // Cancel action has a nil handler—does nothing, just cancels
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        
+        // OK action asks for the text from the alert's first text field
+        let okAction = UIAlertAction(title: "Save", style: .default) { (action) in
+            if let textField = alert.textFields?.first,
+               let text = textField.text {
+                print(text)
+                self.title = "\(text)'s Items"
+                let defaults = UserDefaults.standard
+                defaults.set(text, forKey: ItemsViewController.usernameKey)
+            }
+        }
+        alert.addAction(okAction)
+        
+        // Another closure! This one lets you configure the textField.
+        alert.addTextField { (textField) in
+            textField.placeholder = "Please enter your name"
+        }
+        
+        present(alert, animated: true)
+        
+        
+
         
     }
     
+    
 
+    
     /*
     // MARK: - Navigation
 
@@ -71,6 +114,22 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    
+    
+    
+     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            items.remove(at: indexPath.row)
+            Item.saveToFile(items: items)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .none {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+    
+
+
+    
     @IBAction func saveItem (with segue: UIStoryboardSegue) {
         if segue.identifier == "saveunwind", let source = segue.source as? ItemAddViewController {
             if source.item != nil {
@@ -78,7 +137,43 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
                 Item.saveToFile(items: items)
             }
             self.itemTableView.reloadData()
+             print("###########___________##############")
+            print("saved")
+            print("###########___________##############")
             
+        }
+    }
+    
+    @IBAction func editItem (with segue: UIStoryboardSegue) {
+    
+        if segue.identifier == "editunwind", let source = segue.source as? ItemEditViewController {
+//            items[row].name = source.item.name
+//            items[row].quantity = source.item.quantity
+//            Item.saveToFile(items: items)
+//            print("###########___________##############")
+//            print("edited")
+//            print("###########___________##############")
+//
+//            self.itemTableView.reloadData()
+            print(source.item.name)
+
+
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        row = indexPath.row
+        performSegue(withIdentifier: "edit", sender: row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "edit"{
+            
+            let destination = segue.destination as! ItemEditViewController
+            
+            destination.item = items[row]
+        
         }
     }
     

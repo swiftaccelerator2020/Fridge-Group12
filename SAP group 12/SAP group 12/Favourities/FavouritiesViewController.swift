@@ -15,6 +15,8 @@ class FavouritiesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ItemsViewController.usernameKey = "i dont"
 
         // Do any additional setup after loading the view.
         favouritiesTableView.delegate = self

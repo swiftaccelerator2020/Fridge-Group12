@@ -57,7 +57,7 @@
             <objects>
                 <viewController id="rGE-sM-PGB" customClass="ItemsViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SeS-x0-l8e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IGq-EE-AKk">
@@ -66,14 +66,14 @@
                                 <color key="backgroundColor" name="Background"/>
                                 <color key="sectionIndexBackgroundColor" name="Background"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Item" rowHeight="120" id="QA3-LQ-9VX" customClass="ItemTableViewCell" customModule="SAP_group_12" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Item" rowHeight="120" id="QA3-LQ-9VX" customClass="ItemTableViewCell" customModule="SAP_group_12" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QA3-LQ-9VX" id="X8R-GU-4Hv">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5j6-fi-M6h">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5j6-fi-M6h">
                                                     <rect key="frame" x="10" y="10" width="394" height="100"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cfk-LC-Tou">
@@ -113,12 +113,15 @@
                                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <state key="normal" title="☰"/>
                                                                             <connections>
-                                                                                <segue destination="cKs-qp-YYg" kind="show" id="31x-Ng-qLI"/>
+                                                                                <segue destination="cKs-qp-YYg" kind="show" identifier="edit" id="31x-Ng-qLI"/>
                                                                             </connections>
                                                                         </button>
                                                                     </subviews>
                                                                     <constraints>
+                                                                        <constraint firstItem="9UM-UZ-l0t" firstAttribute="leading" secondItem="zYk-NV-1lm" secondAttribute="trailing" id="1NI-Uw-tDu"/>
                                                                         <constraint firstItem="zYk-NV-1lm" firstAttribute="leading" secondItem="wSg-eE-XcT" secondAttribute="trailing" constant="10" id="NXm-b7-GPh"/>
+                                                                        <constraint firstItem="zYk-NV-1lm" firstAttribute="top" secondItem="yIa-KT-pgI" secondAttribute="top" id="ZXL-y9-pvY"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="zYk-NV-1lm" secondAttribute="bottom" id="szK-BZ-XVL"/>
                                                                     </constraints>
                                                                 </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1m-P2-Gd9">
@@ -165,17 +168,12 @@
                         <color key="backgroundColor" name="Background"/>
                     </view>
                     <navigationItem key="navigationItem" title="Your Items" largeTitleDisplayMode="always" id="UPa-RD-brc">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="zaL-Cb-ytC">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <segue destination="lgz-Ou-LgS" kind="show" id="7mQ-QZ-Kdg"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="trash" catalog="system" id="bUd-IQ-oFP">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zaL-Cb-ytC">
+                            <color key="tintColor" name="tab bar colour"/>
+                            <connections>
+                                <segue destination="lgz-Ou-LgS" kind="show" id="7mQ-QZ-Kdg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="itemTableView" destination="IGq-EE-AKk" id="IRZ-FC-sM6"/>
@@ -190,7 +188,7 @@
             <objects>
                 <viewController id="w4K-C1-SVU" customClass="ItemAddViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bNf-dv-DCs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mdJ-2p-O6A">
@@ -226,7 +224,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="rdO-oe-Qk6">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="rdO-oe-Qk6">
                                         <rect key="frame" x="0.0" y="187.5" width="394" height="517.5"/>
                                     </datePicker>
                                 </subviews>
@@ -267,14 +265,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gj5-Jn-FSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="nuH-YN-kLA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-814" y="2578"/>
+            <point key="canvasLocation" x="-1264" y="2569"/>
         </scene>
         <!--Edit-->
         <scene sceneID="5bt-S8-cgJ">
             <objects>
                 <viewController id="cKs-qp-YYg" customClass="ItemEditViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="leq-y7-ZjF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="erE-B3-16C">
@@ -288,6 +286,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Al1-Es-7tI">
                                         <rect key="frame" x="0.0" y="38.5" width="394" height="34"/>
+                                        <color key="backgroundColor" name="Button colours"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -299,6 +298,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M6S-UA-0uG">
                                         <rect key="frame" x="0.0" y="113" width="394" height="34"/>
+                                        <color key="backgroundColor" name="Button colours"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -324,19 +324,27 @@
                     <navigationItem key="navigationItem" title="Edit" id="2jO-fL-wYS">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="S0y-F8-IcX">
                             <color key="tintColor" name="tab bar colour"/>
+                            <connections>
+                                <segue destination="KJf-JU-Vgd" kind="unwind" identifier="editunwind" unwindAction="editItemWith:" id="O1H-fl-Ux6"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="Al1-Es-7tI" id="zcZ-XH-zod"/>
+                        <outlet property="quantityTextField" destination="M6S-UA-0uG" id="csQ-Mx-xPf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpM-Si-Nmw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="KJf-JU-Vgd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="75" y="1844"/>
+            <point key="canvasLocation" x="-326" y="1833"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ibm-KL-jve">
             <objects>
                 <viewController id="r5n-PJ-HUI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lgK-Fi-hsf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yZg-Dr-gBb">
@@ -425,7 +433,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZeY-0x-apm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="684" y="1827"/>
+            <point key="canvasLocation" x="349" y="1833"/>
         </scene>
         <!--Favourities-->
         <scene sceneID="fte-MW-mfD">
@@ -470,7 +478,7 @@
             <objects>
                 <viewController id="eZw-Fi-viy" customClass="RecipiesViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="psm-bH-Mog">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KIP-jh-4md">
@@ -586,7 +594,7 @@
             <objects>
                 <viewController id="mBT-rK-dPs" customClass="SettingsViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="exQ-g5-lfQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xei-24-Dnl">
@@ -677,7 +685,7 @@
             <objects>
                 <viewController id="pEA-yK-8Wp" customClass="FavouritiesViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g0p-6a-h0R">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pcF-Ve-5oh">
@@ -805,7 +813,7 @@
             <objects>
                 <viewController id="X2T-3T-l8P" customClass="GroceryListViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QqC-mS-JYZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nNW-Q9-Gz6">
@@ -926,7 +934,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3j-T3-oph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-862" y="1810"/>
+            <point key="canvasLocation" x="-1091" y="1810"/>
         </scene>
     </scenes>
     <resources>

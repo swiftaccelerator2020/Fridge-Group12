@@ -8,12 +8,39 @@
 import UIKit
 
 class ItemEditViewController: UIViewController {
+    
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var quantityTextField: UITextField!
+    var item:Item!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        nameTextField.text = item.name
+        quantityTextField.text = item.quantity
+        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if nameTextField.text != "" || quantityTextField.text != "" {
+            
+            if segue.identifier == "editunwind" {
+                item.name = nameTextField.text ?? ""
+                item.quantity = quantityTextField.text ?? ""
+                
+                
+            }
+        }
+    }
+    
+    
+
+    
+
+    
     
 
     /*

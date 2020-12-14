@@ -72,6 +72,16 @@ extension GroceryListViewController: UITableViewDataSource, UITableViewDelegate 
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+       if editingStyle == .delete {
+           groceryLists.remove(at: indexPath.row)
+           GroceryList.saveToFile(groceries: groceryLists)
+           tableView.deleteRows(at: [indexPath], with: .fade)
+       } else if editingStyle == .none {
+           // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+       }
+   }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         row = indexPath.row

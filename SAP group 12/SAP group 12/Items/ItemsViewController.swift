@@ -13,7 +13,7 @@ class ItemsViewController: UIViewController {
     
     var items: [Item] = []
     var row = 0
-    static let usernameKey = "user name blah blah"
+    static var usernameKey = "user name blah blah"
 
     
     override func viewDidLoad() {
@@ -35,38 +35,6 @@ class ItemsViewController: UIViewController {
             
         }
         
-
-        
-        let defaults = UserDefaults.standard
-        if let username = defaults.string(forKey: ItemsViewController.usernameKey) {
-            self.title = "\(username)'s Items"
-            return
-        }
-        
-        let alert = UIAlertController(title: "What's your name?", message: "", preferredStyle: .alert)
-        
-        // Cancel action has a nil handler—does nothing, just cancels
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alert.addAction(cancelAction)
-        
-        // OK action asks for the text from the alert's first text field
-        let okAction = UIAlertAction(title: "Save", style: .default) { (action) in
-            if let textField = alert.textFields?.first,
-               let text = textField.text {
-                print(text)
-                self.title = "\(text)'s Items"
-                let defaults = UserDefaults.standard
-                defaults.set(text, forKey: ItemsViewController.usernameKey)
-            }
-        }
-        alert.addAction(okAction)
-        
-        // Another closure! This one lets you configure the textField.
-        alert.addTextField { (textField) in
-            textField.placeholder = "Please enter your name"
-        }
-        
-        present(alert, animated: true)
         
         
 
@@ -132,9 +100,11 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
     
     @IBAction func saveItem (with segue: UIStoryboardSegue) {
         if segue.identifier == "saveunwind", let source = segue.source as? ItemAddViewController {
+
             if source.item != nil {
                 self.items.append(source.item)
                 Item.saveToFile(items: items)
+                
             }
             self.itemTableView.reloadData()
              print("###########___________##############")
@@ -147,15 +117,15 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
     @IBAction func editItem (with segue: UIStoryboardSegue) {
     
         if segue.identifier == "editunwind", let source = segue.source as? ItemEditViewController {
-//            items[row].name = source.item.name
-//            items[row].quantity = source.item.quantity
-//            Item.saveToFile(items: items)
-//            print("###########___________##############")
-//            print("edited")
-//            print("###########___________##############")
-//
-//            self.itemTableView.reloadData()
-            print(source.item.name)
+            items[row].name = source.item.name
+            items[row].quantity = source.item.quantity
+            Item.saveToFile(items: items)
+            print("###########___________##############")
+            print("edited")
+            print("###########___________##############")
+
+            self.itemTableView.reloadData()
+            
 
 
             

@@ -27,7 +27,7 @@ class ItemEditViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if nameTextField.text != "" || quantityTextField.text != "" {
             
-            if segue.identifier == "editUnwind" {
+            if segue.identifier == "editunwind" {
                 item.name = nameTextField.text ?? ""
                 item.quantity = quantityTextField.text ?? ""
                 

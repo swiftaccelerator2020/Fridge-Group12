@@ -325,7 +325,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="S0y-F8-IcX">
                             <color key="tintColor" name="tab bar colour"/>
                             <connections>
-                                <segue destination="KJf-JU-Vgd" kind="unwind" identifier="editUnwind" unwindAction="editItemWith:" id="n1S-NV-Z7x"/>
+                                <segue destination="KJf-JU-Vgd" kind="unwind" identifier="editunwind" unwindAction="editItemWith:" id="O1H-fl-Ux6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

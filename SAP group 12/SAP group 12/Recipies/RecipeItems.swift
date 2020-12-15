@@ -12,7 +12,7 @@ import Foundation
 struct RecipeItem: Codable {
     var title: String
     var recipeLink: String
-    var ingredients: String
+    var ingredients: [String]
     var thumbnailLink: String
     
     enum CodingKeys: String, CodingKey {
@@ -26,7 +26,8 @@ struct RecipeItem: Codable {
         let valueContainer = try decoder.container(keyedBy: CodingKeys.self)
         self.title = try valueContainer.decode(String.self, forKey: CodingKeys.title)
         self.recipeLink = try valueContainer.decode(String.self, forKey: CodingKeys.recipeLink)
-        self.ingredients = try valueContainer.decode(String.self, forKey: CodingKeys.ingredients)
+        let ingredientString = try valueContainer.decode(String.self, forKey: CodingKeys.ingredients)
+        self.ingredients = ingredientString.components(separatedBy: ",")
         self.thumbnailLink = try valueContainer.decode(String.self, forKey: CodingKeys.thumbnailLink)
     }
 }

@@ -38,19 +38,44 @@ class GroceryListAddEditViewController: UIViewController {
     @IBAction func doneEditingQuantity(_ sender: UITextField) {
         sender.resignFirstResponder()
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "unwindToMain" {
-            if newItem {
-                
-             grocery = GroceryList(name: nameTextField.text ?? "",
-                        quantity: quantityTextField.text ?? "")
-                
-            } else {
-                grocery.name = nameTextField.text ?? ""
-                grocery.quantity = quantityTextField.text ?? ""
+    
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "unwindToMain"{
+            if nameTextField.text == "" || quantityTextField.text == "" {
+                return false
+        
             }
         }
+        
+        if newItem {
+            
+         grocery = GroceryList(name: nameTextField.text ?? "",
+                    quantity: quantityTextField.text ?? "")
+            
+        } else {
+            grocery.name = nameTextField.text ?? ""
+            grocery.quantity = quantityTextField.text ?? ""
+        }
+
+        
+        return true
     }
+
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "unwindToMain" {
+//            if newItem {
+//
+//             grocery = GroceryList(name: nameTextField.text ?? "",
+//                        quantity: quantityTextField.text ?? "")
+//
+//            } else {
+//                grocery.name = nameTextField.text ?? ""
+//                grocery.quantity = quantityTextField.text ?? ""
+//            }
+//        }
+//    }
     
 
     /*

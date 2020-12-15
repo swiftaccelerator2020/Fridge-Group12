@@ -25,7 +25,14 @@ class ItemAddViewController: UIViewController{
         
     }
     
-
+    @IBAction func doneEditingName(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func doneEditingQuantity(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -18,6 +18,9 @@ class ItemTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        overrideUserInterfaceStyle = .light
+        itemView.overrideUserInterfaceStyle = .light
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

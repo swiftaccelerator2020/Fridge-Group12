@@ -19,7 +19,7 @@ class ItemsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        overrideUserInterfaceStyle = .light
+        
         
         
         itemTableView.delegate = self

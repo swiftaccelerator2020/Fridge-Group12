@@ -106,6 +106,15 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		69A995A825886AF100331496 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				69EE1C5625778B55003EAEDC /* LaunchScreen.storyboard */,
+				69EE1C5125778B50003EAEDC /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		69EE1C3F25778B50003EAEDC = {
 			isa = PBXGroup;
 			children = (
@@ -125,14 +134,13 @@
 		69EE1C4A25778B50003EAEDC /* SAP group 12 */ = {
 			isa = PBXGroup;
 			children = (
-				69A995A625886AC200331496 /* Delegate */,
-				69EE1C5125778B50003EAEDC /* Main.storyboard */,
+				69EE1C5425778B55003EAEDC /* Assets.xcassets */,
 				691C7E19257D3393006A82EB /* MainTabBarController.swift */,
+				69A995A625886AC200331496 /* Delegate */,
+				69A995A825886AF100331496 /* Storyboard */,
 				691C7E16257CFFD8006A82EB /* Grocery List */,
 				691C7E0D257CFE5C006A82EB /* Recipies */,
 				691C7E0F257CFE74006A82EB /* Items */,
-				69EE1C5425778B55003EAEDC /* Assets.xcassets */,
-				69EE1C5625778B55003EAEDC /* LaunchScreen.storyboard */,
 				69EE1C5925778B55003EAEDC /* Info.plist */,
 			);
 			path = "SAP group 12";

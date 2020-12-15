@@ -84,13 +84,6 @@
 			path = Recipies;
 			sourceTree = "<group>";
 		};
-		691C7E0E257CFE69006A82EB /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
 		691C7E0F257CFE74006A82EB /* Items */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +133,6 @@
 				691C7E16257CFFD8006A82EB /* Grocery List */,
 				691C7E0C257CFE48006A82EB /* Favourities */,
 				691C7E0D257CFE5C006A82EB /* Recipies */,
-				691C7E0E257CFE69006A82EB /* Settings */,
 				691C7E0F257CFE74006A82EB /* Items */,
 				69EE1C5425778B55003EAEDC /* Assets.xcassets */,
 				69EE1C5625778B55003EAEDC /* LaunchScreen.storyboard */,

@@ -23,8 +23,6 @@
 		6973A4B1257DE89000F48C67 /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973A4B0257DE89000F48C67 /* Favourite.swift */; };
 		69DE85FB257A86C100CFAF28 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DE85FA257A86C100CFAF28 /* ItemsViewController.swift */; };
 		69DE8600257A87EC00CFAF28 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DE85FF257A87EC00CFAF28 /* ItemTableViewCell.swift */; };
-		69DE8603257B231300CFAF28 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DE8602257B231300CFAF28 /* SettingsViewController.swift */; };
-		69DE8606257B23C200CFAF28 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DE8605257B23C200CFAF28 /* SettingTableViewCell.swift */; };
 		69EE1C4C25778B50003EAEDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EE1C4B25778B50003EAEDC /* AppDelegate.swift */; };
 		69EE1C4E25778B50003EAEDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EE1C4D25778B50003EAEDC /* SceneDelegate.swift */; };
 		69EE1C5325778B50003EAEDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69EE1C5125778B50003EAEDC /* Main.storyboard */; };
@@ -50,8 +48,6 @@
 		6973A4B0257DE89000F48C67 /* Favourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
 		69DE85FA257A86C100CFAF28 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		69DE85FF257A87EC00CFAF28 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
-		69DE8602257B231300CFAF28 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		69DE8605257B23C200CFAF28 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		69EE1C4825778B50003EAEDC /* SAP group 12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SAP group 12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EE1C4B25778B50003EAEDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69EE1C4D25778B50003EAEDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,8 +93,6 @@
 		691C7E0E257CFE69006A82EB /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				69DE8605257B23C200CFAF28 /* SettingTableViewCell.swift */,
-				69DE8602257B231300CFAF28 /* SettingsViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -236,7 +230,6 @@
 				6973A4AE257DE66D00F48C67 /* GroceryList.swift in Sources */,
 				691C7E07257CFCE8006A82EB /* GroceryListViewController.swift in Sources */,
 				6973A4A9257DD77A00F48C67 /* Item.swift in Sources */,
-				69DE8606257B23C200CFAF28 /* SettingTableViewCell.swift in Sources */,
 				69DE8600257A87EC00CFAF28 /* ItemTableViewCell.swift in Sources */,
 				691C7E01257CFBBB006A82EB /* RecipiesViewController.swift in Sources */,
 				691C7DFE257CFB93006A82EB /* RecipieTableViewCell.swift in Sources */,
@@ -250,7 +243,6 @@
 				69DE85FB257A86C100CFAF28 /* ItemsViewController.swift in Sources */,
 				69EE1C4C25778B50003EAEDC /* AppDelegate.swift in Sources */,
 				695D2C9D2587B9A200F170C3 /* GroceryListAddEditViewController.swift in Sources */,
-				69DE8603257B231300CFAF28 /* SettingsViewController.swift in Sources */,
 				69EE1C4E25778B50003EAEDC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

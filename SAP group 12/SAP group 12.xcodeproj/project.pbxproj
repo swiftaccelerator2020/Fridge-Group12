@@ -97,6 +97,15 @@
 			path = "Grocery List";
 			sourceTree = "<group>";
 		};
+		69A995A625886AC200331496 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				69EE1C4B25778B50003EAEDC /* AppDelegate.swift */,
+				69EE1C4D25778B50003EAEDC /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		69EE1C3F25778B50003EAEDC = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +125,7 @@
 		69EE1C4A25778B50003EAEDC /* SAP group 12 */ = {
 			isa = PBXGroup;
 			children = (
-				69EE1C4B25778B50003EAEDC /* AppDelegate.swift */,
-				69EE1C4D25778B50003EAEDC /* SceneDelegate.swift */,
+				69A995A625886AC200331496 /* Delegate */,
 				69EE1C5125778B50003EAEDC /* Main.storyboard */,
 				691C7E19257D3393006A82EB /* MainTabBarController.swift */,
 				691C7E16257CFFD8006A82EB /* Grocery List */,

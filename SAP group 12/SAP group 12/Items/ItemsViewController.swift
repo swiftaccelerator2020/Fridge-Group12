@@ -78,7 +78,7 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.itemView.layer.cornerRadius = 25
         
-        // create tap gesture recognizer
+        
 
         cell.itemTitle.text = items[indexPath.row].name
         cell.itemQuantity.text = items[indexPath.row].quantity

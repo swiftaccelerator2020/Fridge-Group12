@@ -21,7 +21,7 @@ class ItemAddViewController: UIViewController{
         
         // Do any additional setup after loading the view.
         
-
+        
         
     }
     
@@ -33,16 +33,35 @@ class ItemAddViewController: UIViewController{
         sender.resignFirstResponder()
     }
     
-
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "saveunwind" {
-            item = Item(name: nameTextField.text ?? "",
-                        quantity: quantityTextField.text ?? "",
-                        isFavourite: false,
-                        expiryDate: expiryDatePicker.date)
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "saveunwind"{
+            if nameTextField.text == "" || quantityTextField.text == "" {
+                return false
+                
+            }
         }
+        
+        item = Item(name: nameTextField.text ?? "",
+                    quantity: quantityTextField.text ?? "",
+                    isFavourite: false,
+                    expiryDate: expiryDatePicker.date)
+        
+        
+        return true
     }
+    
+    
+    
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        if segue.identifier == "saveunwind" {
+    //            item = Item(name: nameTextField.text ?? "",
+    //                        quantity: quantityTextField.text ?? "",
+    //                        isFavourite: false,
+    //                        expiryDate: expiryDatePicker.date)
+    //        }
+    //    }
     
     
     

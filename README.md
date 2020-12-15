@@ -1,8 +1,9 @@
 # Fridge
 
+[![Language](http://img.shields.io/badge/swift-5-orange.svg?style=flat)](https://developer.apple.com/swift)
+[![Xcode](http://img.shields.io/badge/xcode-12.2-red.svg?style=flat)](https://developer.apple.com/xcode)
 ![Platform:IOS](https://img.shields.io/badge/platform-IOS-lightgrey)
-![](https://img.shields.io/badge/Organization-TInkercademy-red)
-![](https://img.shields.io/badge/hackers-4-blue)
+
 
 Foobar is a app where you can track the inventory of your fridge and its expiry date. Possible recipies will also be provided based on the items that you have.
 

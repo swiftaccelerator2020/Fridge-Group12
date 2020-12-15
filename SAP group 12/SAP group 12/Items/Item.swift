@@ -11,22 +11,22 @@ class Item: Codable {
     var name: String
     var quantity: String
     var isFavourite: Bool
-    var expiryDate: Date
+    var expiresIn: Int
     
     
-    init(name: String,quantity: String,isFavourite: Bool,expiryDate: Date) {
+    init(name: String,quantity: String,isFavourite: Bool,expiresIn: Int) {
         self.name = name
         self.quantity = quantity
         self.isFavourite = isFavourite
-        self.expiryDate = expiryDate
+        self.expiresIn = expiresIn
     }
     
     
     static func loadSampleData() -> [Item] {
         let friends = [
-            Item(name: "Mushroom",quantity: "10 kg",isFavourite: false,expiryDate: Date()),
-            Item(name: "Chicken",quantity: "10 kg",isFavourite: false,expiryDate: Date()),
-            Item(name: "Fish",quantity: "10 kg",isFavourite: false,expiryDate: Date())
+            Item(name: "Mushroom",quantity: "10 kg",isFavourite: false,expiresIn: 0),
+            Item(name: "Chicken",quantity: "10 kg",isFavourite: false,expiresIn: 0),
+            Item(name: "Fish",quantity: "10 kg",isFavourite: false,expiresIn: 0)
         ]
         return friends
     }

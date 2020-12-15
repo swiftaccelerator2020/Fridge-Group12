@@ -16,6 +16,7 @@ class MainTabBarController: UITabBarController {
 
         // Do any additional setup after loading the view.
         self.tabBar.unselectedItemTintColor = UIColor.black
+        self.selectedIndex = 1
     }
     
 

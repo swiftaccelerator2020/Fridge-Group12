@@ -14,10 +14,12 @@ class ItemsViewController: UIViewController {
     var items: [Item] = []
     var row = 0
     static var usernameKey = "user name blah blah"
+    
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         
         
@@ -60,7 +62,8 @@ class ItemsViewController: UIViewController {
 extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 200
+        
         
     }
     
@@ -79,6 +82,21 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
 
         cell.itemTitle.text = items[indexPath.row].name
         cell.itemQuantity.text = items[indexPath.row].quantity
+
+        
+        if (items[indexPath.row].expiresIn <= 0){
+            cell.indicatorImageView.tintColor = #colorLiteral(red: 0.8270000219, green: 0.1570000052, blue: 0.1330000013, alpha: 1)
+            cell.itemExpiresIn.text = "Expired"
+        } else if (items[indexPath.row].expiresIn < 10){
+            cell.indicatorImageView.tintColor = #colorLiteral(red: 1, green: 0.6510000229, blue: 0.1879999936, alpha: 1)
+            cell.itemExpiresIn.text = "Expires in " + String(items[indexPath.row].expiresIn) + " Days"
+        } else {
+            cell.indicatorImageView.tintColor = #colorLiteral(red: 0.175999999, green: 0.7059999704, blue: 0.3449999988, alpha: 1)
+            cell.itemExpiresIn.text = "Expires in " + String(items[indexPath.row].expiresIn) + " Days"
+
+        }
+        
+
         
         return cell
     }

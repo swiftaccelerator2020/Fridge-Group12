@@ -347,10 +347,10 @@
             </objects>
             <point key="canvasLocation" x="-435" y="1769"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipie View Controller-->
         <scene sceneID="Ibm-KL-jve">
             <objects>
-                <viewController id="r5n-PJ-HUI" sceneMemberID="viewController">
+                <viewController id="r5n-PJ-HUI" customClass="RecipieViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lgK-Fi-hsf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -374,7 +374,7 @@
                                         <rect key="frame" x="0.0" y="147" width="394" height="342.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="40" id="aoN-4M-u9t">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recipeDetailCell" rowHeight="40" id="aoN-4M-u9t" customClass="RecipeDetailTableViewCell" customModule="SAP_group_12" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="394" height="40"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aoN-4M-u9t" id="Dki-ny-3aU">
@@ -402,6 +402,10 @@
                                                         <constraint firstAttribute="trailing" secondItem="zdr-aE-FHi" secondAttribute="trailing" id="xCc-7f-jvq"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="ingredientPresent" destination="Vzx-4Q-b4O" id="6hd-Vp-rWJ"/>
+                                                    <outlet property="recipeIngredient" destination="zdr-aE-FHi" id="BU5-Fc-XWE"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -416,6 +420,9 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="openRecipeButton:" destination="r5n-PJ-HUI" eventType="touchUpInside" id="7HT-oY-FQI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -438,6 +445,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ynM-x9-P4M"/>
+                    <connections>
+                        <outlet property="ingredientsTableView" destination="G1P-f4-obp" id="j6F-BE-y6i"/>
+                        <outlet property="recipeTitle" destination="7j0-UD-rH7" id="q9R-dq-DUP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZeY-0x-apm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -541,7 +552,6 @@
                                             <outlet property="descriptionTextLabel" destination="nq5-P2-G4J" id="11u-WE-qcR"/>
                                             <outlet property="recipieView" destination="Sf1-l4-H83" id="bcE-5l-3Qp"/>
                                             <outlet property="titleTextLabel" destination="8Dd-bV-0cq" id="HWC-Ud-qe9"/>
-                                            <segue destination="r5n-PJ-HUI" kind="show" id="bOQ-96-Rfs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -553,11 +563,12 @@
                     <navigationItem key="navigationItem" title="Recipies" largeTitleDisplayMode="always" id="lht-Pl-jwf"/>
                     <connections>
                         <outlet property="recipiesTableView" destination="KIP-jh-4md" id="p2y-Hp-lKW"/>
+                        <segue destination="r5n-PJ-HUI" kind="show" identifier="showRecipe" id="D7r-O0-fNc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LI5-Ot-fC5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="390" y="1027"/>
+            <point key="canvasLocation" x="390" y="1081"/>
         </scene>
         <!--Grocery List-->
         <scene sceneID="Pll-cO-cn8">

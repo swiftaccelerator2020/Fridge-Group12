@@ -26,6 +26,7 @@
 		69EE1C5525778B55003EAEDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69EE1C5425778B55003EAEDC /* Assets.xcassets */; };
 		69EE1C5825778B55003EAEDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69EE1C5625778B55003EAEDC /* LaunchScreen.storyboard */; };
 		6D8C09562580E53B0003D438 /* RecipeItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8C09552580E53B0003D438 /* RecipeItems.swift */; };
+		6DE515972588F7B6006F767B /* RecipeDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE515962588F7B6006F767B /* RecipeDetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		69EE1C5725778B55003EAEDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69EE1C5925778B55003EAEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D8C09552580E53B0003D438 /* RecipeItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeItems.swift; sourceTree = "<group>"; };
+		6DE515962588F7B6006F767B /* RecipeDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				691C7E00257CFBBB006A82EB /* RecipiesViewController.swift */,
 				691C7DFD257CFB93006A82EB /* RecipieTableViewCell.swift */,
 				6D8C09552580E53B0003D438 /* RecipeItems.swift */,
+				6DE515962588F7B6006F767B /* RecipeDetailTableViewCell.swift */,
 			);
 			path = Recipies;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6973A4AE257DE66D00F48C67 /* GroceryList.swift in Sources */,
+				6DE515972588F7B6006F767B /* RecipeDetailTableViewCell.swift in Sources */,
 				691C7E07257CFCE8006A82EB /* GroceryListViewController.swift in Sources */,
 				6973A4A9257DD77A00F48C67 /* Item.swift in Sources */,
 				69DE8600257A87EC00CFAF28 /* ItemTableViewCell.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 class RecipiesViewController: UIViewController {
     
     var listOfRecipes: [RecipeItem] = []
+    var row = 0
     
     @IBOutlet weak var recipiesTableView: UITableView!
     
@@ -112,7 +113,20 @@ extension RecipiesViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        row = indexPath.row
+        performSegue(withIdentifier: "showRecipe", sender: row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRecipe"{
+            let destination = segue.destination as! RecipieViewController
+            destination.recipeItem = listOfRecipes[row]
+        
+        }
+    }
 
 }
 
 
+// segue identifier:  showRecipe

@@ -32,17 +32,44 @@ class ItemEditViewController: UIViewController {
     @IBAction func doneEditingQuantity(_ sender: UITextField) {
         sender.resignFirstResponder()
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if nameTextField.text != "" || quantityTextField.text != "" {
-            
-            if segue.identifier == "editunwind" {
-                item.name = nameTextField.text ?? ""
-                item.quantity = quantityTextField.text ?? ""
-                
-                
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "editunwind"{
+            if nameTextField.text == "" || quantityTextField.text == "" {
+                return false
+        
             }
         }
+        
+        item.name = nameTextField.text ?? ""
+        item.quantity = quantityTextField.text ?? ""
+        
+        return true
     }
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+//        if nameTextField.text == "" || quantityTextField.text == "" {
+//
+//
+//
+//
+//        } else if nameTextField.text != "" || quantityTextField.text != "" {
+//
+//            if segue.identifier == "editunwind" {
+//
+//                item.name = nameTextField.text ?? ""
+//                item.quantity = quantityTextField.text ?? ""
+//
+//
+//            }
+//
+//
+//        }
+//
+//
+//
+//    }
     
     
 

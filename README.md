@@ -7,10 +7,9 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/swiftaccelerator2020/Fridge-Group12)](https://github.com/swiftaccelerator2020/Fridge-Group12/graphs/contributors)
 
 [![Issues](https://img.shields.io/github/issues/swiftaccelerator2020/Fridge-Group12)](https://github.com/swiftaccelerator2020/Fridge-Group12/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/swiftaccelerator2020/Fridge-Group12)](https://github.com/swiftaccelerator2020/Fridge-Group12/pulls)
 
-
-
-Foobar is a app where you can track the inventory of your fridge and its expiry date. Possible recipies will also be provided based on the items that you have.
+Fridge is a app where you can track the inventory of your fridge and its expiry date. Possible recipies will also be provided based on the items that you have.
 
 ## Installation
 

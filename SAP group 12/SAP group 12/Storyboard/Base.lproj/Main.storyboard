@@ -203,6 +203,9 @@
                                         <color key="backgroundColor" name="Button colours"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditingName:" destination="w4K-C1-SVU" eventType="primaryActionTriggered" id="Jdl-5E-WNM"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLT-gj-Fpz">
                                         <rect key="frame" x="0.0" y="82.5" width="394" height="20.5"/>
@@ -215,6 +218,9 @@
                                         <color key="backgroundColor" name="Button colours"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditingQuantity:" destination="w4K-C1-SVU" eventType="primaryActionTriggered" id="Gq3-MC-phE"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of expiry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srf-B5-DRH">
                                         <rect key="frame" x="0.0" y="157" width="394" height="20.5"/>
@@ -745,6 +751,9 @@
                                         <color key="backgroundColor" name="Button colours"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditingName:" destination="aRs-Zx-UMk" eventType="primaryActionTriggered" id="mPe-GQ-Ewj"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A62-b1-OCZ">
                                         <rect key="frame" x="0.0" y="94.5" width="374" height="20.5"/>
@@ -757,6 +766,9 @@
                                         <color key="backgroundColor" name="Button colours"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditingQuantity:" destination="aRs-Zx-UMk" eventType="primaryActionTriggered" id="Zvk-ox-YLS"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>

@@ -31,6 +31,13 @@ class GroceryListAddEditViewController: UIViewController {
     }
     
     
+    @IBAction func doneEditingName(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func doneEditingQuantity(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "unwindToMain" {
             if newItem {

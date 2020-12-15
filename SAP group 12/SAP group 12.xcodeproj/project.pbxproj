@@ -63,13 +63,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		691C7E0C257CFE48006A82EB /* Favourities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Favourities;
-			sourceTree = "<group>";
-		};
 		691C7E0D257CFE5C006A82EB /* Recipies */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +121,6 @@
 				69EE1C5125778B50003EAEDC /* Main.storyboard */,
 				691C7E19257D3393006A82EB /* MainTabBarController.swift */,
 				691C7E16257CFFD8006A82EB /* Grocery List */,
-				691C7E0C257CFE48006A82EB /* Favourities */,
 				691C7E0D257CFE5C006A82EB /* Recipies */,
 				691C7E0F257CFE74006A82EB /* Items */,
 				69EE1C5425778B55003EAEDC /* Assets.xcassets */,

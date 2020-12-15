@@ -26,7 +26,6 @@
                         <segue destination="fPm-e9-g0a" kind="relationship" relationship="viewControllers" id="KBq-Ze-a3k"/>
                         <segue destination="Wos-YH-Xyk" kind="relationship" relationship="viewControllers" id="PQz-xV-85v"/>
                         <segue destination="zoi-Iu-xOD" kind="relationship" relationship="viewControllers" id="5gQ-8T-Ilf"/>
-                        <segue destination="ME9-rA-nuq" kind="relationship" relationship="viewControllers" id="T2q-7Q-0SE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZ0-MM-ltX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -57,7 +56,7 @@
             <objects>
                 <viewController id="rGE-sM-PGB" customClass="ItemsViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SeS-x0-l8e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IGq-EE-AKk">
@@ -188,7 +187,7 @@
             <objects>
                 <viewController id="w4K-C1-SVU" customClass="ItemAddViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bNf-dv-DCs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mdJ-2p-O6A">
@@ -265,14 +264,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gj5-Jn-FSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="nuH-YN-kLA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-355.07246376811599" y="2568.75"/>
+            <point key="canvasLocation" x="-904" y="2584"/>
         </scene>
         <!--Edit-->
         <scene sceneID="5bt-S8-cgJ">
             <objects>
                 <viewController id="cKs-qp-YYg" customClass="ItemEditViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="leq-y7-ZjF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="erE-B3-16C">
@@ -337,14 +336,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpM-Si-Nmw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="KJf-JU-Vgd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="584.05797101449275" y="1832.8125"/>
+            <point key="canvasLocation" x="-48" y="1842"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ibm-KL-jve">
             <objects>
                 <viewController id="r5n-PJ-HUI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lgK-Fi-hsf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yZg-Dr-gBb">
@@ -478,7 +477,7 @@
             <objects>
                 <viewController id="eZw-Fi-viy" customClass="RecipiesViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="psm-bH-Mog">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KIP-jh-4md">
@@ -570,122 +569,12 @@
             </objects>
             <point key="canvasLocation" x="325" y="1085"/>
         </scene>
-        <!--Items-->
-        <scene sceneID="Vra-ON-yzA">
-            <objects>
-                <navigationController title="Items" automaticallyAdjustsScrollViewInsets="NO" id="ME9-rA-nuq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" id="fdL-XG-XNv"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="yH4-RK-WIu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="mBT-rK-dPs" kind="relationship" relationship="rootViewController" id="EKk-w9-hRj"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xda-Yf-eox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1167" y="327"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="Lk1-wc-JLp">
-            <objects>
-                <viewController id="mBT-rK-dPs" customClass="SettingsViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="exQ-g5-lfQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xei-24-Dnl">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" name="Background"/>
-                                <color key="sectionIndexBackgroundColor" name="Background"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Setting" rowHeight="120" id="qpp-ex-M9t" customClass="SettingTableViewCell" customModule="SAP_group_12" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qpp-ex-M9t" id="pyh-Im-3bS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b4K-dX-l8l">
-                                                    <rect key="frame" x="25" y="16" width="364" height="88"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="256" translatesAutoresizingMaskIntoConstraints="NO" id="pkO-kE-IrK">
-                                                            <rect key="frame" x="0.0" y="20" width="612" height="48"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rY7-k9-dv7">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="306" height="48"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="fill" translatesAutoresizingMaskIntoConstraints="NO" id="sZd-L2-mQT">
-                                                                    <rect key="frame" x="562" y="0.0" width="52" height="48"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="50" id="bTe-uo-Dy9"/>
-                                                                    </constraints>
-                                                                </switch>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="rY7-k9-dv7" firstAttribute="leading" secondItem="pkO-kE-IrK" secondAttribute="leading" id="PeG-ZP-bNS"/>
-                                                                <constraint firstItem="rY7-k9-dv7" firstAttribute="top" secondItem="pkO-kE-IrK" secondAttribute="top" id="QUd-yv-ECe"/>
-                                                                <constraint firstAttribute="bottom" secondItem="rY7-k9-dv7" secondAttribute="bottom" id="T2t-kk-2vR"/>
-                                                                <constraint firstItem="rY7-k9-dv7" firstAttribute="width" secondItem="pkO-kE-IrK" secondAttribute="width" multiplier="0.5" id="tGF-1x-PvM"/>
-                                                            </constraints>
-                                                        </stackView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstItem="pkO-kE-IrK" firstAttribute="leading" secondItem="b4K-dX-l8l" secondAttribute="leading" id="6ot-Is-E7c"/>
-                                                        <constraint firstAttribute="bottom" secondItem="pkO-kE-IrK" secondAttribute="bottom" constant="20" id="Qa9-qN-xFS"/>
-                                                        <constraint firstItem="pkO-kE-IrK" firstAttribute="top" secondItem="b4K-dX-l8l" secondAttribute="top" constant="20" id="TJY-kn-2VF"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="b4K-dX-l8l" firstAttribute="leading" secondItem="pyh-Im-3bS" secondAttribute="leadingMargin" constant="5" id="90F-bK-Z18"/>
-                                                <constraint firstItem="b4K-dX-l8l" firstAttribute="top" secondItem="pyh-Im-3bS" secondAttribute="topMargin" constant="5" id="Bcl-uy-swY"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="b4K-dX-l8l" secondAttribute="trailing" constant="5" id="HpH-iW-l3s"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="b4K-dX-l8l" secondAttribute="bottom" constant="5" id="UBy-CG-Pe4"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" name="Background"/>
-                                        <connections>
-                                            <outlet property="settingsLabel" destination="rY7-k9-dv7" id="qYc-wK-EmX"/>
-                                            <outlet property="settingsSwitch" destination="sZd-L2-mQT" id="INu-Ns-aXX"/>
-                                            <outlet property="settingsView" destination="b4K-dX-l8l" id="DZK-jh-uHN"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="nze-2C-Wxo"/>
-                        <color key="backgroundColor" name="Background"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Xei-24-Dnl" secondAttribute="trailing" id="iO8-mP-1wR"/>
-                            <constraint firstItem="Xei-24-Dnl" firstAttribute="leading" secondItem="exQ-g5-lfQ" secondAttribute="leading" id="kGN-E5-uh3"/>
-                            <constraint firstItem="Xei-24-Dnl" firstAttribute="top" secondItem="nze-2C-Wxo" secondAttribute="top" id="rtG-Nw-dcR"/>
-                            <constraint firstItem="Xei-24-Dnl" firstAttribute="bottom" secondItem="nze-2C-Wxo" secondAttribute="bottom" id="wgV-oF-kmO"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="jlP-04-bqh"/>
-                    <connections>
-                        <outlet property="settingsTableView" destination="Xei-24-Dnl" id="EH1-z1-y0z"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OK7-6n-fAM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1166.6666666666667" y="1084.1517857142856"/>
-        </scene>
         <!--Favourities-->
         <scene sceneID="BMt-b0-Z61">
             <objects>
                 <viewController id="pEA-yK-8Wp" customClass="FavouritiesViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g0p-6a-h0R">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pcF-Ve-5oh">
@@ -813,7 +702,7 @@
             <objects>
                 <viewController id="X2T-3T-l8P" customClass="GroceryListViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QqC-mS-JYZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nNW-Q9-Gz6">
@@ -935,7 +824,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3j-T3-oph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-181.15942028985509" y="1809.375"/>
+            <point key="canvasLocation" x="-903" y="1833"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YL0-QT-YLl">
@@ -954,18 +843,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjV-VH-6NZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3278" y="1803"/>
+            <point key="canvasLocation" x="-3459" y="1809"/>
         </scene>
         <!--Grocery List Add Edit View Controller-->
         <scene sceneID="uIw-X4-2Zb">
             <objects>
                 <viewController id="aRs-Zx-UMk" customClass="GroceryListAddEditViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tg6-0r-n67">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="B0D-Cc-2Cv">
-                                <rect key="frame" x="20" y="160" width="374" height="169"/>
+                                <rect key="frame" x="20" y="108" width="374" height="169"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlM-Gf-tAf">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -1018,16 +907,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HNT-pE-Nb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="yod-ic-bge" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2686" y="2603"/>
+            <point key="canvasLocation" x="-2662" y="1809"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="O0k-G1-Iyv"/>
+        <segue reference="M2x-lg-au3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
-        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>

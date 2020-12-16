@@ -14,11 +14,11 @@ class RecipeDetailTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        if ingredientIsPresent {
-            ingredientPresent.image = UIImage(named:"circle.fill")
-        }  else {
-            ingredientPresent.image = UIImage(named:"circle")
-        }
+//        if ingredientIsPresent {
+//            ingredientPresent.image = UIImage(named:"circle")
+//        }  else {
+//            ingredientPresent.image = UIImage(named:"circle")
+//        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

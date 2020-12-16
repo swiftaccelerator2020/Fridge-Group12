@@ -11,6 +11,7 @@ class RecipiesViewController: UIViewController {
     
     var listOfRecipes: [RecipeItem] = []
     var row = 0
+    var searchFoodItems: [String] = []
     
     @IBOutlet weak var recipiesTableView: UITableView!
     
@@ -24,10 +25,15 @@ class RecipiesViewController: UIViewController {
         recipiesTableView.separatorStyle = .none
         
         // TODO: access array of food items to load recipes. This is a placeholder - zedong
-        let searchFoodItems = ["potato", "sausage"]
+        
+        if let loadedItems = Item.loadFromFile() {
+            for item in loadedItems {
+                self.searchFoodItems.append(item.name)
+            }
+        }
         
         // run get recipes function
-        getRecipes (foodItems: searchFoodItems) { (recipeResults) in
+        getRecipes (foodItems: self.searchFoodItems) { (recipeResults) in
             if var recipeResults = recipeResults {
                 // store array of all items
                 var itemsLeftToCheck = recipeResults.results.count

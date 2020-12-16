@@ -14,9 +14,13 @@ class RecipiesViewController: UIViewController {
     var searchFoodItems: [String] = []
     
     @IBOutlet weak var recipiesTableView: UITableView!
+    @IBOutlet var loadingIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear (_ animated: Bool) {
 
         // Do any additional setup after loading the view.
 
@@ -24,14 +28,16 @@ class RecipiesViewController: UIViewController {
         recipiesTableView.dataSource = self
         recipiesTableView.separatorStyle = .none
         
-        // TODO: access array of food items to load recipes. This is a placeholder - zedong
+        self.loadingIndicator.startAnimating()
+        self.loadingIndicator.isHidden = false
         
         if let loadedItems = Item.loadFromFile() {
             for item in loadedItems {
                 self.searchFoodItems.append(item.name)
             }
         }
-        
+        self.listOfRecipes = []
+        self.recipiesTableView.reloadData()
         // run get recipes function
         getRecipes (foodItems: self.searchFoodItems) { (recipeResults) in
             if var recipeResults = recipeResults {
@@ -68,6 +74,8 @@ class RecipiesViewController: UIViewController {
                         if(itemsLeftToCheck == 0) {
                             // TODO: implement reloading table view here - zedong
                             DispatchQueue.main.async {
+                                self.loadingIndicator.stopAnimating()
+                                self.loadingIndicator.isHidden = true
                                 self.recipiesTableView.reloadData()
                             }
                             for item in self.listOfRecipes {

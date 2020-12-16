@@ -20,10 +20,6 @@ class ItemsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-        
         itemTableView.delegate = self
         itemTableView.dataSource = self
         itemTableView.separatorStyle = .none

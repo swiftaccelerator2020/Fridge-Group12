@@ -30,6 +30,13 @@ struct RecipeItem: Codable {
         self.ingredients = ingredientString.components(separatedBy: ",")
         self.thumbnailLink = try valueContainer.decode(String.self, forKey: CodingKeys.thumbnailLink)
     }
+    
+    init(title: String, recipeLink: String, ingredients: [String], thumbnailLink: String) {
+        self.title = title
+        self.recipeLink = recipeLink
+        self.ingredients = ingredients
+        self.thumbnailLink = thumbnailLink
+    }
 }
 
 // handles full API call return

@@ -36,6 +36,18 @@ class RecipieViewController: UIViewController {
         
     }
     
+    func removeWhitespaceAndHyphen(_ string: String) -> String {
+        var rstring = string
+        let regex = try! NSRegularExpression(pattern: #"[\s-]"#, options: [.caseInsensitive])
+        let mString = NSMutableString(string: rstring)
+        regex.replaceMatches(in: mString, options: [], range: NSMakeRange(0, mString.length), withTemplate: "")
+        rstring = String(mString)
+        rstring = rstring.filter {CharacterSet.decimalDigits.inverted.contains($0.unicodeScalars.first!)}
+        rstring = rstring.replacingOccurrences(of: "  ", with: " ")
+        return rstring
+        
+    }
+    
 }
 
 extension RecipieViewController: UITableViewDataSource, UITableViewDelegate {
@@ -50,9 +62,20 @@ extension RecipieViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ingredientsTableView.dequeueReusableCell(withIdentifier: "recipeDetailCell") as! RecipeDetailTableViewCell
+        let currentIngredient = recipeItem.ingredients[indexPath.row]
+        cell.recipeIngredient.text? = currentIngredient
         
-        cell.recipeIngredient.text? = recipeItem.ingredients[indexPath.row]
-        cell.ingredientIsPresent = true //todo - implement checking for ingredient presence? - zedong
+        if let loadedItems = Item.loadFromFile() {
+            for item in loadedItems {
+                if removeWhitespaceAndHyphen(currentIngredient) == removeWhitespaceAndHyphen(item.name) {
+                    cell.ingredientPresent.image = UIImage(systemName:"circle.fill")
+                    break
+                }
+            }
+        }
+        
+        
+        
 
         return cell
     }

@@ -10,15 +10,9 @@ import UIKit
 class RecipeDetailTableViewCell: UITableViewCell {
     @IBOutlet var ingredientPresent: UIImageView!
     @IBOutlet var recipeIngredient: UILabel!
-    var ingredientIsPresent = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        if ingredientIsPresent {
-//            ingredientPresent.image = UIImage(named:"circle")
-//        }  else {
-//            ingredientPresent.image = UIImage(named:"circle")
-//        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

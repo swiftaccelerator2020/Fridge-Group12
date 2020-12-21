@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class RecipieViewController: UIViewController {
     
@@ -33,7 +34,10 @@ class RecipieViewController: UIViewController {
     }
     */
     @IBAction func openRecipeButton(_ sender: Any) {
-        
+        if let url = URL(string: recipeItem.recipeLink) {
+            let vc = SFSafariViewController(url: url)
+            present(vc, animated: true)
+        }
     }
     
     func removeWhitespaceAndHyphen(_ string: String) -> String {

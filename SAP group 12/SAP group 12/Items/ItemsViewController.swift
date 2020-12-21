@@ -11,6 +11,9 @@ class ItemsViewController: UIViewController {
 
     @IBOutlet weak var itemTableView: UITableView!
     
+    let defaults = UserDefaults.standard
+    
+    
     var items: [Item] = []
     var row = 0
     static var usernameKey = "user name blah blah"
@@ -104,6 +107,7 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         if editingStyle == .delete {
             items.remove(at: indexPath.row)
             Item.saveToFile(items: items)
+            defaults.set(true, forKey: "shouldReloadRecipes")
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .none {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -119,6 +123,7 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
             if source.item != nil {
                 self.items.append(source.item)
                 Item.saveToFile(items: items)
+                defaults.set(true, forKey: "shouldReloadRecipes")
                 
             }
             self.itemTableView.reloadData()
@@ -135,6 +140,7 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
             items[row].name = source.item.name
             items[row].quantity = source.item.quantity
             Item.saveToFile(items: items)
+            defaults.set(true, forKey: "shouldReloadRecipes")
             print("###########___________##############")
             print("edited")
             print("###########___________##############")
@@ -156,7 +162,6 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
         if segue.identifier == "edit"{
             
             let destination = segue.destination as! ItemEditViewController
-            
             destination.item = items[row]
         
         }

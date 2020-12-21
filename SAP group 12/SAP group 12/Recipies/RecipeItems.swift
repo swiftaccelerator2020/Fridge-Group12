@@ -14,6 +14,7 @@ struct RecipeItem: Codable {
     var recipeLink: String
     var ingredients: [String]
     var thumbnailLink: String
+    var canShowDetails: Bool
     
     enum CodingKeys: String, CodingKey {
         case title
@@ -29,13 +30,15 @@ struct RecipeItem: Codable {
         let ingredientString = try valueContainer.decode(String.self, forKey: CodingKeys.ingredients)
         self.ingredients = ingredientString.components(separatedBy: ",")
         self.thumbnailLink = try valueContainer.decode(String.self, forKey: CodingKeys.thumbnailLink)
+        self.canShowDetails = true
     }
     
-    init(title: String, recipeLink: String, ingredients: [String], thumbnailLink: String) {
+    init(title: String, recipeLink: String, ingredients: [String], thumbnailLink: String, canShowDetails: Bool) {
         self.title = title
         self.recipeLink = recipeLink
         self.ingredients = ingredients
         self.thumbnailLink = thumbnailLink
+        self.canShowDetails = canShowDetails
     }
 }
 

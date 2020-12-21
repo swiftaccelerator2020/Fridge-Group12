@@ -67,6 +67,10 @@ extension RecipieViewController: UITableViewDataSource, UITableViewDelegate {
         
         if let loadedItems = Item.loadFromFile() {
             for i in 0...(loadedItems.count-1) {
+                print("\n\n\n")
+                print(removeWhitespaceAndHyphen(currentIngredient))
+                print(removeWhitespaceAndHyphen(loadedItems[i].name))
+                print("\n\n\n")
                 if removeWhitespaceAndHyphen(currentIngredient) == removeWhitespaceAndHyphen(loadedItems[i].name) {
                     cell.ingredientPresent.image = UIImage(systemName:"circle.fill")
                     break

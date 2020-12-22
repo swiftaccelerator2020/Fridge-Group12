@@ -55,7 +55,7 @@
             <objects>
                 <viewController id="rGE-sM-PGB" customClass="ItemsViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SeS-x0-l8e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IGq-EE-AKk">
@@ -180,7 +180,7 @@
             <objects>
                 <viewController id="w4K-C1-SVU" customClass="ItemAddViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bNf-dv-DCs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mdJ-2p-O6A">
@@ -269,7 +269,7 @@
             <objects>
                 <viewController id="cKs-qp-YYg" customClass="ItemEditViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="leq-y7-ZjF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="erE-B3-16C">
@@ -347,7 +347,7 @@
             <objects>
                 <viewController id="r5n-PJ-HUI" customClass="RecipieViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lgK-Fi-hsf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yZg-Dr-gBb">
@@ -369,7 +369,7 @@
                                         <rect key="frame" x="0.0" y="145" width="374" height="337.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recipeDetailCell" rowHeight="40" id="aoN-4M-u9t" customClass="RecipeDetailTableViewCell" customModule="SAP_group_12" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recipeDetailCell" rowHeight="40" id="aoN-4M-u9t" customClass="RecipeDetailTableViewCell" customModule="SAP_group_12" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="374" height="40"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aoN-4M-u9t" id="Dki-ny-3aU">
@@ -474,7 +474,7 @@
             <objects>
                 <viewController id="eZw-Fi-viy" customClass="RecipiesViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="psm-bH-Mog">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KIP-jh-4md">
@@ -483,7 +483,7 @@
                                 <color key="backgroundColor" name="Background"/>
                                 <color key="sectionIndexBackgroundColor" name="Background"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Recipie" rowHeight="120" id="vqC-w0-Gjj" customClass="RecipieTableViewCell" customModule="SAP_group_12" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Recipie" rowHeight="120" id="vqC-w0-Gjj" customClass="RecipieTableViewCell" customModule="SAP_group_12" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vqC-w0-Gjj" id="jdN-6j-OvW">
@@ -499,6 +499,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+<<<<<<< HEAD
                                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="7Ug-6S-1LS">
                                                             <rect key="frame" x="10" y="66" width="354" height="4"/>
                                                             <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -507,14 +508,19 @@
                                                                 <constraint firstAttribute="width" constant="354" id="moe-aq-vXq"/>
                                                             </constraints>
                                                         </progressView>
+=======
+>>>>>>> a6661b153efe0aa9cdb41d36555e27e30a92302b
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="8Dd-bV-0cq" firstAttribute="leading" secondItem="Sf1-l4-H83" secondAttribute="leading" constant="10" id="3va-rN-SlI"/>
                                                         <constraint firstItem="8Dd-bV-0cq" firstAttribute="top" secondItem="Sf1-l4-H83" secondAttribute="top" constant="10" id="bAC-P9-PXA"/>
                                                         <constraint firstAttribute="trailing" secondItem="8Dd-bV-0cq" secondAttribute="trailing" constant="20" id="chv-Pd-ZTQ"/>
+<<<<<<< HEAD
                                                         <constraint firstAttribute="bottom" secondItem="7Ug-6S-1LS" secondAttribute="bottom" constant="10" id="d6b-d4-Owc"/>
                                                         <constraint firstItem="7Ug-6S-1LS" firstAttribute="centerX" secondItem="Sf1-l4-H83" secondAttribute="centerX" id="jhl-aw-2fS"/>
+=======
+>>>>>>> a6661b153efe0aa9cdb41d36555e27e30a92302b
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -527,7 +533,10 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Background"/>
                                         <connections>
+<<<<<<< HEAD
                                             <outlet property="ingredientsFullView" destination="7Ug-6S-1LS" id="L8T-1C-Vcj"/>
+=======
+>>>>>>> a6661b153efe0aa9cdb41d36555e27e30a92302b
                                             <outlet property="recipieView" destination="Sf1-l4-H83" id="bcE-5l-3Qp"/>
                                             <outlet property="titleTextLabel" destination="8Dd-bV-0cq" id="HWC-Ud-qe9"/>
                                         </connections>
@@ -582,7 +591,7 @@
             <objects>
                 <viewController id="X2T-3T-l8P" customClass="GroceryListViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QqC-mS-JYZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nNW-Q9-Gz6">
@@ -732,7 +741,7 @@
             <objects>
                 <viewController id="aRs-Zx-UMk" customClass="GroceryListAddEditViewController" customModule="SAP_group_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tg6-0r-n67">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="B0D-Cc-2Cv">

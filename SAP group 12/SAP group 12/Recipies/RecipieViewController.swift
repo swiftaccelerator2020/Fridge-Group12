@@ -12,12 +12,16 @@ class RecipieViewController: UIViewController {
     
     @IBOutlet var recipeTitle: UILabel!
     @IBOutlet var ingredientsTableView: UITableView!
+    
+    @IBOutlet weak var viewFullRecipieButton: UIButton!
     var recipeItem: RecipeItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         recipeTitle.text = recipeItem.title
         // Do any additional setup after loading the view.
+        viewFullRecipieButton.layer.cornerRadius = 25
+        
         ingredientsTableView.delegate = self
         ingredientsTableView.dataSource = self
         ingredientsTableView.separatorStyle = .none
@@ -57,7 +61,7 @@ class RecipieViewController: UIViewController {
 extension RecipieViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 40
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

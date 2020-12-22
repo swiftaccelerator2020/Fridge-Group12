@@ -158,7 +158,6 @@ extension RecipiesViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.recipieView.layer.cornerRadius = 10
         cell.titleTextLabel.text? = self.listOfRecipes[indexPath.row].title
-        cell.descriptionTextLabel.text? = "" // gotta fix this
         
         
         return cell

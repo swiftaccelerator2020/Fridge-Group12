@@ -444,6 +444,7 @@
                     <connections>
                         <outlet property="ingredientsTableView" destination="G1P-f4-obp" id="j6F-BE-y6i"/>
                         <outlet property="recipeTitle" destination="7j0-UD-rH7" id="q9R-dq-DUP"/>
+                        <outlet property="viewFullRecipieButton" destination="jFa-pr-hXN" id="Dbv-hL-DIx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZeY-0x-apm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -499,8 +500,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-<<<<<<< HEAD
-                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="7Ug-6S-1LS">
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="7Ug-6S-1LS">
                                                             <rect key="frame" x="10" y="66" width="354" height="4"/>
                                                             <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                             <color key="tintColor" name="tab bar colour"/>
@@ -508,19 +508,12 @@
                                                                 <constraint firstAttribute="width" constant="354" id="moe-aq-vXq"/>
                                                             </constraints>
                                                         </progressView>
-=======
->>>>>>> a6661b153efe0aa9cdb41d36555e27e30a92302b
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="8Dd-bV-0cq" firstAttribute="leading" secondItem="Sf1-l4-H83" secondAttribute="leading" constant="10" id="3va-rN-SlI"/>
                                                         <constraint firstItem="8Dd-bV-0cq" firstAttribute="top" secondItem="Sf1-l4-H83" secondAttribute="top" constant="10" id="bAC-P9-PXA"/>
                                                         <constraint firstAttribute="trailing" secondItem="8Dd-bV-0cq" secondAttribute="trailing" constant="20" id="chv-Pd-ZTQ"/>
-<<<<<<< HEAD
-                                                        <constraint firstAttribute="bottom" secondItem="7Ug-6S-1LS" secondAttribute="bottom" constant="10" id="d6b-d4-Owc"/>
-                                                        <constraint firstItem="7Ug-6S-1LS" firstAttribute="centerX" secondItem="Sf1-l4-H83" secondAttribute="centerX" id="jhl-aw-2fS"/>
-=======
->>>>>>> a6661b153efe0aa9cdb41d36555e27e30a92302b
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -533,10 +526,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Background"/>
                                         <connections>
-<<<<<<< HEAD
-                                            <outlet property="ingredientsFullView" destination="7Ug-6S-1LS" id="L8T-1C-Vcj"/>
-=======
->>>>>>> a6661b153efe0aa9cdb41d36555e27e30a92302b
+                                            <outlet property="ingredientsFullView" destination="7Ug-6S-1LS" id="Oge-cY-zYP"/>
                                             <outlet property="recipieView" destination="Sf1-l4-H83" id="bcE-5l-3Qp"/>
                                             <outlet property="titleTextLabel" destination="8Dd-bV-0cq" id="HWC-Ud-qe9"/>
                                         </connections>

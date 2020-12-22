@@ -10,8 +10,8 @@ import UIKit
 class RecipieTableViewCell: UITableViewCell {
 
     @IBOutlet weak var recipieView: UIView!
-    @IBOutlet var titleTextLabel: UILabel!
-    @IBOutlet var descriptionTextLabel: UILabel!
+    @IBOutlet var titleTextLabel: UILabel! 
+    @IBOutlet var ingredientsFullView: UIProgressView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -499,12 +499,6 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nq5-P2-G4J">
-                                                            <rect key="frame" x="10" y="35.5" width="344" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="7Ug-6S-1LS">
                                                             <rect key="frame" x="10" y="66" width="354" height="4"/>
                                                             <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -517,13 +511,10 @@
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="8Dd-bV-0cq" firstAttribute="leading" secondItem="Sf1-l4-H83" secondAttribute="leading" constant="10" id="3va-rN-SlI"/>
-                                                        <constraint firstItem="nq5-P2-G4J" firstAttribute="leading" secondItem="Sf1-l4-H83" secondAttribute="leading" constant="10" id="Oma-e8-N7c"/>
                                                         <constraint firstItem="8Dd-bV-0cq" firstAttribute="top" secondItem="Sf1-l4-H83" secondAttribute="top" constant="10" id="bAC-P9-PXA"/>
                                                         <constraint firstAttribute="trailing" secondItem="8Dd-bV-0cq" secondAttribute="trailing" constant="20" id="chv-Pd-ZTQ"/>
                                                         <constraint firstAttribute="bottom" secondItem="7Ug-6S-1LS" secondAttribute="bottom" constant="10" id="d6b-d4-Owc"/>
                                                         <constraint firstItem="7Ug-6S-1LS" firstAttribute="centerX" secondItem="Sf1-l4-H83" secondAttribute="centerX" id="jhl-aw-2fS"/>
-                                                        <constraint firstItem="nq5-P2-G4J" firstAttribute="top" secondItem="8Dd-bV-0cq" secondAttribute="bottom" constant="5" id="uOQ-ZE-fvL"/>
-                                                        <constraint firstAttribute="trailing" secondItem="nq5-P2-G4J" secondAttribute="trailing" constant="20" id="yK6-1p-Xxo"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -536,7 +527,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Background"/>
                                         <connections>
-                                            <outlet property="descriptionTextLabel" destination="nq5-P2-G4J" id="11u-WE-qcR"/>
+                                            <outlet property="ingredientsFullView" destination="7Ug-6S-1LS" id="L8T-1C-Vcj"/>
                                             <outlet property="recipieView" destination="Sf1-l4-H83" id="bcE-5l-3Qp"/>
                                             <outlet property="titleTextLabel" destination="8Dd-bV-0cq" id="HWC-Ud-qe9"/>
                                         </connections>

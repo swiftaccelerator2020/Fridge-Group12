@@ -13,9 +13,9 @@ Fridge is a app where you can track the inventory of your fridge and its expiry 
 
 ## Installation
 
-Fridge will <b><i>soon</i></b> be available for IOS on [App Store]() 
+Fridge is available for IOS on [App Store](https://apps.apple.com/us/app/fridge-track-your-food/id1547398070#?platform=iphone) 
 
-[![App Store](https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg)]()
+[![App Store](https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg)](https://apps.apple.com/us/app/fridge-track-your-food/id1547398070#?platform=iphone)
 
 ## Contributing
 

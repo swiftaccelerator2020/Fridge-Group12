@@ -23,10 +23,10 @@ This project is not open for contributions.
 
 ### Team members 
 
-[Ze Dong](https://github.com/sawzedong), 
-[Yu Yan](https://github.com/Compsognathus07), 
-[Le Yang](https://github.com/leCloudy), 
-[Shanjiith Pranov](https://github.com/Shanjiith-Pranov) 
+- [Ze Dong](https://github.com/sawzedong)
+- [Yu Yan](https://github.com/Compsognathus07)
+- [Le Yang](https://github.com/leCloudy)
+- [Shanjiith Pranov](https://github.com/Shanjiith-Pranov) 
 
 ## License
 This project is yet to be liscenced
